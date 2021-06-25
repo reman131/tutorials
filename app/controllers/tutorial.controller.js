@@ -51,11 +51,47 @@ exports.findAll = (req, res) => {
 
 // Find a single Tutorial with an id
 exports.findOne = (req, res) => {
-  
+  if(!req.params.id){
+    res.status(400).send({
+      message:"id cannot be empty."
+    })
+    return;
+  }
+
+  Tutorial.findByPk(req.params.id)
+    .then(data => {
+        res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || ("Some error ocurred while retrieving tutorials with id = " + id)
+      })
+  })
+
 };
 
 // Update a Tutorial by the id in the request
 exports.update = (req, res) => {
+  const id = req.params.id;
+
+  Tutorial.update(req.body,{
+    where:{id:id}
+  })
+  .then(num => {
+    if(num == 1)
+      res.send({
+        message: "Tutorial was updated successfully."
+      });
+    else
+      res.status(404).send({
+        messgae: `Cannot update Tutorial with id=${id}.`
+      });    
+  })
+  .catch(err => {
+    res.status(500).send({
+      message: "Error updating Tutorial with id=" + id
+    })
+  });
   
 };
 
