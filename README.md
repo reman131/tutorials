@@ -7,6 +7,7 @@ to run the project:
 --------------------
 app description:
 
+- Through this app you can creat, read, update and delete tutorials.
 – Node.js Express exports REST APIs & interacts with MySQL Database using Sequelize ORM.
 – React Client sends HTTP Requests and retrieves HTTP Responses using Axios, consume data on the components. React Router is used for navigating to pages.
 
