@@ -15,5 +15,6 @@ fron-end React.js App Diagram:
  ![Alt Text](https://raw.githubusercontent.com/reman131/tutorials/master/img/fron-end.PNG)
 --------------------
 back-end architecture:
+![Alt Text](https://raw.githubusercontent.com/reman131/tutorials/master/img/back-end.PNG)
  
 
