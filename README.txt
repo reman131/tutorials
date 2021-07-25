@@ -12,7 +12,7 @@ app description:
 
 ---------------------
 fron-end React.js App Diagram: 
- ![Alt Text](https://raw.githubusercontent.com/reman131/tutorials/master/img/fron-end.PNG)
+ ![Alt Text](https://raw.githubusercontent.com/reman131/tutorials/master/img/fron-end.PNG?raw=true)
 --------------------
 back-end architecture:
  
